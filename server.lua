@@ -82,10 +82,10 @@ Framework.Functions.CreateCallback('qb-back:delay', function(source, cb, add)
 end)
 
 RegisterServerEvent("qb-back:delay:end")
-AddEventHandler("qb-back:delay:end",function(ile)
+AddEventHandler("qb-back:delay:end",function(time)
     if Delay ~= 0 then
-        if ile ~= nil then
-            Citizen.SetTimeout(1000 * 60 * ile, function()
+        if time ~= nil then
+            Citizen.SetTimeout(1000 * 60 * time, function()
                 Delay = Delay - 1
                 print(Delay.." delete after time")
             end)
