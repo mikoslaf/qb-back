@@ -4,42 +4,42 @@ Delay = 0
 TriggerEvent('Framework:GetObject', function(obj) Framework = obj end)
 
 Framework.Functions.CreateCallback('qb-back:police', function(source, cb)
-    local liczba = 0
+    local number = 0
     for _, v in pairs(Framework.Functions.GetPlayers()) do
         local Player = Framework.Functions.GetPlayer(v)
         if Player ~= nil then 
             if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
-                liczba = liczba +1
+                number = number +1
             end
         end
     end
-    cb(liczba)
+    cb(number)
 end)
 
 Framework.Functions.CreateCallback('qb-back:mechanic', function(source, cb)
-    local liczba = 0
+    local number = 0
     for _, v in pairs(Framework.Functions.GetPlayers()) do
         local Player = Framework.Functions.GetPlayer(v)
         if Player ~= nil then 
             if Player.PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty then
-                liczba = liczba +1
+                number = number +1
             end
         end
     end
-    cb(liczba)
+    cb(number)
 end)
 
 Framework.Functions.CreateCallback('qb-back:ambulance', function(source, cb)
-    local liczba = 0
+    local number = 0
     for _, v in pairs(Framework.Functions.GetPlayers()) do
         local Player = Framework.Functions.GetPlayer(v)
         if Player ~= nil then 
             if Player.PlayerData.job.name == "ambulance" and Player.PlayerData.job.onduty then
-                liczba = liczba +1
+                number = number +1
             end
         end
     end
-    cb(liczba)
+    cb(number)
 end)
 
 
